@@ -78,20 +78,7 @@ def cryptography():
             
             if prompt == "encode":
                 text = input("Enter Text to Encode:")
-                while True:
-                    try:
-                        if text.isspace and not(text.isdigit) and text == "":
-                            text = input("Enter Text to Encode:")
-                            raise Exception
-                    except Exception:
-                        print("Please, enter a text")
-                        text = input("Please check,enter Text to Encode:")
-                        break
-                    else:
-                        text = input("Please check,enter Text to Encode:")
-                        break
-
-                # key
+                 
                 key = input("Enter Encryption Key: ")
                 while True:
                     try:
@@ -124,19 +111,7 @@ def cryptography():
                 
                 if prompt == "decode":
                     text = input("Enter Text to decode:")
-                    while True:
-                        try:
-
-                            if text.isspace or not(text.isdigit) or text == "":
-                                text = input("Enter Text to decode:")
-                                raise Exception
-                        except Exception:
-                            print("Please, enter a text")
-                        else:
-                            text = input("Please check,enter Text to decode:")
-                            break
-
-                    # key
+                    
                     key = input("Enter decryption Key: ")
                     while True:
                         try:
