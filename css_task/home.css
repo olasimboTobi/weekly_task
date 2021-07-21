@@ -1,0 +1,97 @@
+    /* Desktop */
+    .container{
+        display:grid;
+       
+        grid-template-columns:1fr 4fr 1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.6fr 0.1fr;
+       height:100vh;
+       grid-gap:3%;
+       grid-template-areas: 
+         "header header header"
+         "sidebar nav ads"
+         "sidebar main ads"
+         "footer footer footer"
+     }
+    header {
+          background-color:white;
+                 border-radius: 5px;
+                 border-color: red;
+                 border-style: solid;
+                 grid-area: header;
+                 
+     }
+     #main{
+           background-color: white;
+                 border-radius: 5px;
+                 border-color: red;
+                 border-style: solid;
+                 grid-area: main;
+                 width:100%;
+        }
+     #nav{
+                 background-color:white;
+                 border-radius: 5px;
+                 border-color: red;
+                 border-style: solid;
+                 grid-area: nav;
+                 }
+    #sidebar{
+                 background-color:white;
+                 border-radius: 5px;
+                 border-color: red;
+                 border-style: solid;
+                 grid-area: sidebar;
+                  
+             }
+     #ads{
+                 background-color:white;
+                 border-radius: 5px;
+                 border-color: red;
+                 border-style: solid;
+                 grid-area: ads;
+             
+             }
+     #footer{
+                 background-color:white;
+                 border-radius: 5px;
+                 border-color: red;
+                 border-style: solid;
+                 grid-area: footer;
+                 
+             }
+
+@media screen and (max-width:750px){
+    .container{
+        display: grid;
+        grid-template-columns:1fr 4fr;
+        grid-template-rows: 0.1fr 0.1fr 0.8fr 0.1fr;
+        height:100vh;
+        grid-gap:3%;
+        grid-template-areas: 
+            "header header header"
+            "nav nav nav"
+            "sidebar main main"
+            "ads footer footer"
+
+    }
+}
+@media screen and (max-width:450px){
+    .container{
+    display:grid;
+   
+    grid-template-columns:1fr;
+    grid-template-rows: 0.2fr 0.2fr 1fr 0.2fr 0.2fr 0.2fr;
+   
+   height:150vh;
+   grid-gap:3%;
+ 
+   grid-template-areas: 
+     "header"
+     "nav"
+     "main"
+     "sidebar"
+     "ads"
+     "footer"
+ 
+     }
+}
