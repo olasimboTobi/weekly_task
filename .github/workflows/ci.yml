@@ -23,8 +23,10 @@ jobs:
       with:
         postgresql version: '11'
     - name: Run migrations
-      run: python manage.py migrate
+      run: python polls/manage.py migrate
     - name: Run tests
-      run: python manage.py test
+      run: python polls/manage.py test
+
+    
 
     
