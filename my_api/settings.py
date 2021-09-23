@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'auth1',
     'rest_framework',
-    'heroapp'
+    'heroapp',
     'rest_framework.authtoken',
 ]
 
