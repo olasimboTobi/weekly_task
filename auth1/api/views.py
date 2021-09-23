@@ -8,10 +8,11 @@ from rest_framework import status
 
 from auth1 import models
 
-@api_view(['POST'])
+@api_view(['POST',])
 def logout_view(request):
     if request.method == 'POST':
         request.user.auth_token.delete()
+        return Response(status=status.HTTP_200_OK)
 
 
 

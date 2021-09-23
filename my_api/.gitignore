@@ -1,2 +1,4 @@
 my_venv6
 logenv
+__pycache__/
+.idea
