@@ -38,10 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'auth1',
     'rest_framework',
-    'heroapp',
     'rest_framework.authtoken',
+
+   
 ]
 
 MIDDLEWARE = [
