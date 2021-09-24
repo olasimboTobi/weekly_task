@@ -8,6 +8,7 @@ from rest_framework import status
 from django_otp.oath import hotp
 from django.core.exceptions import ObjectDoesNotExist
 from auth1 import models
+from django.core.mail import send_email
 
 @api_view(http_method_names=['GET'])
 @permission_classes([IsAuthenticated])
@@ -50,6 +51,7 @@ def registration_view(request):
             # token = Token.objects.get(user=account).key
             # data['token'] = token
             data['otp'] = create_otp(key= b'1234567890123467890',counter=2, digit=6)
+            # send_email(data['otp'])
 
             return Response(data)
         else:
