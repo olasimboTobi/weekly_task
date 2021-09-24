@@ -20,3 +20,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/', include('auth1.api.urls')),
 ]
+
