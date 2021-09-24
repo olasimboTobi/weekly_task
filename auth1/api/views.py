@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from rest_framework.decorators import api_view,permission_classes
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from auth1.api.serializers import RegistrationSerializer
 from django.contrib.auth.models import AnonymousUser
@@ -35,8 +35,9 @@ def logout_view(request):
 
 
 @api_view(['POST',])
+@permission_classes([AllowAny])
 def registration_view(request):
-
+   
 
     if request.method == 'POST':
         serializer = RegistrationSerializer(data =request.data)
